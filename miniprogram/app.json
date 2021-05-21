@@ -1,16 +1,25 @@
 {
   "pages": [
-    "pages/main/main",
+    "pages/index/index",
+    "pages/home/home",
     "pages/help/help",
-    "pages/admin/admin"
+    "pages/main/main",
+    "pages/identify/identify",
+    "pages/admin/activity/activity",
+    "pages/admin/system/system",
+    "pages/admin/user/user",
+    "pages/self/self"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "usingComponents": {
+    "cu-custom": "/components/colorui/components/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "参加定向越野训练营场地活动需要获取设备的位置信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
 }

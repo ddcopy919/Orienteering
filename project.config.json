@@ -39,7 +39,7 @@
   },
   "appid": "wx3b352d45eb25bc83",
   "projectname": "orienteering",
-  "libVersion": "2.14.1",
+  "libVersion": "2.17.0",
   "condition": {
     "search": {
       "list": []

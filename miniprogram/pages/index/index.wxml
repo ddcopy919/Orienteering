@@ -1,2 +1,21 @@
-<!--miniprogram/pages/index/index.wxml-->
-<text>miniprogram/pages/index/index.wxml</text>
+<!--
+  <cu-custom bgColor="bg-gradual-green" isBack="h">
+	<view slot="backText">{{backText}}</view>
+	<view slot="content">{{content}}</view>
+</cu-custom>
+-->
+
+<home wx:if="{{pageCur=='home'}}"></home>
+<help wx:if="{{pageCur=='help'}}"></help>
+<main wx:if="{{pageCur=='main'}}"></main>
+<self wx:if="{{pageCur=='self'}}"></self>
+
+<view class="cu-bar tabbar margin-top bg-gradual-green foot bg-img-bot" style="background-image:url({{appData.settings.bgImage}})">
+  <view wx:for="{{tabBar}}" wx:key="index" bindtap="navChange"
+    class="action text-{{index==pageCur?'orange':'white'}}" data-cur="{{index}}">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabBar/{{item.img}}{{pageCur==index?'_fill':''}}.png"></image>
+    </view>
+    <view>{{item.text}}</view>
+  </view>
+</view>

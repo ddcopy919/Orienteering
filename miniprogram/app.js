@@ -1,6 +1,25 @@
 //app.js
 App({
+  globalData:{},
+
+  data:{
+    settings:{
+      title: 'ddd',
+      // 最大打卡半径(米)
+      maxScan: 30,
+      colorStyle: 'green',
+      bgImage: '/images/bkg/bg1.jpg'
+    },
+    tabBar: {
+      home: '首页',
+      help: '技能',
+      main: '活动',
+      my: '我的'
+    },
+  },
+  
   onLaunch: function () {
+    /*
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -12,8 +31,13 @@ App({
         // env: 'my-env-id',
         traceUser: true,
       })
-    }
-
-    this.globalData = {}
+    }*/
+    wx.getSystemInfo({
+      success: e => {
+        let custom = wx.getMenuButtonBoundingClientRect();
+        this.globalData.Custom = custom;  
+        this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+      }
+    })
   }
 })

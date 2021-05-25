@@ -1,12 +1,71 @@
+<!-- 头像，信息 -->
+<view class="cu-card dynamic">
+  <view class="cu-item shadow ">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(/images/tabBar/addr_fill.png);"></view>
+        <view class="content">
+          <view class="text-grey">李俊达
+            ({{baseInfo.userLevel==0?'':('VIP'+baseInfo.userLevel + '用户')}})
+          </view>
+          <view class="text-gray text-content text-df">
+            {{baseInfo.roleId[0]=='1'?'系统管理员':''}},
+            {{baseInfo.roleId[1]=='1'?'活动管理':''}},
+            <view>
+              经验:{{baseInfo.expScores}},
+              体能:{{baseInfo.sportScores}},
+              距离:{{baseInfo.distScores}}km
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="baseInfo.roleId[0]=='1'" class="cu-item shadow ">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <image class="cu-avatar round lg" src="/images/userInfo/settings.png"></image>
+        <view class="content">
+          <view class="text-grey">系统设置</view>
+          <view class="text-gray text-content text-df">
+            设置定向小程序运行参数
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="baseInfo.roleId[1]=='1'" class="cu-item shadow ">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <image class="cu-avatar round lg" src="/images/userInfo/qcad.png"></image>
+        <view class="content">
+          <view class="text-grey">活动设置</view>
+          <view class="text-gray text-content text-df">
+            对定向越野活动的场地、路线进行管理与维护
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item shadow ">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <image class="cu-avatar round lg" src="/images/userInfo/record.png"></image>
+        <view class="content">
+          <view class="text-grey">运动纪录</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
 <view>
-2
+  2
 </view>
 <view>
-2
+  2
 </view>
 <view>
-2
-</view>
-<view>
-2
+  2
 </view>

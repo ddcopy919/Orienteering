@@ -19,9 +19,12 @@ Component({
    * 页面的初始数据
    */
   data: {
+    baseInfo: app.data.baseInfo
   },
 
   attached(){
+    console.log(app.data)
+
   },
 
   /**

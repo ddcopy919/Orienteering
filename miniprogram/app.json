@@ -7,7 +7,7 @@
     "pages/identify/identify",
     "pages/admin/activity/activity",
     "pages/admin/system/system",
-    "pages/admin/user/user",
+    "pages/admin/users/users",
     "pages/self/self"
   ],
   "window": {

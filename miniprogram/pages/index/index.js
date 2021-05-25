@@ -9,17 +9,6 @@ Page({
   data: {
     pageCur: "home",
     
-    baseInfo: {
-      // 用户标识
-      userId:'',
-      // 角色标识 ABCD, A:1 系统管理员，B:1 活动管理者，C:1 普通用户，D:待定  
-      roleId:'1111',
-      // 用户VIP级别 1,2,3...
-      userLevel: 9,
-      // 能力级别 4,3,2,1
-      sportLevel:''
-    },
-
     tabBar: {
       home: {
         content: '心悦定向越野',
@@ -47,7 +36,6 @@ Page({
   navChange (e) {
     var cur = e.currentTarget.dataset.cur
     this.setData({
-      content: this.data.tabBar[cur].content,
       pageCur: cur
     })
   },

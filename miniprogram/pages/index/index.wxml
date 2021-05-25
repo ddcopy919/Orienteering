@@ -10,9 +10,9 @@
 <main wx:if="{{pageCur=='main'}}"></main>
 <self wx:if="{{pageCur=='self'}}"></self>
 
-<view class="cu-bar tabbar margin-top bg-gradual-green foot bg-img-bot" style="background-image:url({{appData.settings.bgImage}})">
+<view class="cu-bar tabbar margin-top bg-gradual-green foot bg-img-bot" style="background-image:url(/images/bkg/bg1.jpg)">
   <view wx:for="{{tabBar}}" wx:key="index" bindtap="navChange"
-    class="action text-{{index==pageCur?'orange':'white'}}" data-cur="{{index}}">
+    class="action text-{{index==pageCur?'orange':'black'}}" data-cur="{{index}}">
     <view class='cuIcon-cu-image'>
       <image src="/images/tabBar/{{item.img}}{{pageCur==index?'_fill':''}}.png"></image>
     </view>

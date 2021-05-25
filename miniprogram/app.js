@@ -10,11 +10,19 @@ App({
       colorStyle: 'green',
       bgImage: '/images/bkg/bg1.jpg'
     },
-    tabBar: {
-      home: '首页',
-      help: '技能',
-      main: '活动',
-      my: '我的'
+    baseInfo: {
+      // 用户标识
+      userId:'ljd',
+      // 角色标识 ABCD, A:1 系统管理员，B:1 活动管理者，C:1 待定  
+      roleId:'111',
+      // 用户VIP级别 1,2,3...
+      userLevel: 3,
+      // 经验值
+      expScores: 9,
+      // 体能分(参考：参加次数-消耗累计)
+      sportScores:200,
+      // 距离分(m)
+      distScores:200
     },
   },
   

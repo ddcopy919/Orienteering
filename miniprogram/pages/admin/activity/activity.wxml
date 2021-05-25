@@ -1,2 +1,13 @@
-<!--miniprogram/pages/admin/activity/activity.wxml-->
-<text>miniprogram/pages/admin/activity/activity.wxml</text>
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">场地路线管理</view>
+</cu-custom>
+
+<view class="cu-list menu sm-border card-menu margin-top">
+  <view wx:for="{{places}}" wx:key="index" class="cu-item narrow">
+    <view class="content">
+      <image src="/images/userInfo/kuser.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">{{item.p1}},{{item.p2}},{{item.p3}},{{item.p4}}</text>
+    </view>
+  </view>
+</view>

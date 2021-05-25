@@ -8,7 +8,8 @@
     "pages/admin/activity/activity",
     "pages/admin/system/system",
     "pages/admin/users/users",
-    "pages/self/self"
+    "pages/self/self",
+    "pages/self/personal"
   ],
   "window": {
     "navigationStyle": "custom"

@@ -1,6 +1,7 @@
 <!-- 头像，信息 -->
 <view class="cu-card dynamic">
   <view class="cu-item shadow ">
+    <navigator class="action" url="/pages/self/personal" hover-class="none">
     <view class="cu-list menu-avatar">
       <view class="cu-item">
         <view class="cu-avatar round lg" style="background-image:url(/images/tabBar/addr_fill.png);"></view>
@@ -20,33 +21,41 @@
         </view>
       </view>
     </view>
+    </navigator>
   </view>
+
   <view wx:if="baseInfo.roleId[0]=='1'" class="cu-item shadow ">
-    <view class="cu-list menu-avatar">
-      <view class="cu-item">
-        <image class="cu-avatar round lg" src="/images/userInfo/settings.png"></image>
-        <view class="content">
-          <view class="text-grey">系统设置</view>
-          <view class="text-gray text-content text-df">
-            设置定向小程序运行参数
+    <navigator class="action" url="/pages/admin/system/system" hover-class="none">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <image class="cu-avatar round lg" src="/images/userInfo/settings.png"></image>
+          <view class="content">
+            <view class="text-grey">运行参数管理</view>
+            <view class="text-gray text-content text-df">
+              设置定向小程序运行参数
+            </view>
           </view>
         </view>
       </view>
-    </view>
+    </navigator>
   </view>
+
   <view wx:if="baseInfo.roleId[1]=='1'" class="cu-item shadow ">
-    <view class="cu-list menu-avatar">
-      <view class="cu-item">
-        <image class="cu-avatar round lg" src="/images/userInfo/qcad.png"></image>
-        <view class="content">
-          <view class="text-grey">活动设置</view>
-          <view class="text-gray text-content text-df">
-            对定向越野活动的场地、路线进行管理与维护
+    <navigator class="action" url="/pages/admin/activity/activity" hover-class="none">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <image class="cu-avatar round lg" src="/images/userInfo/qcad.png"></image>
+          <view class="content">
+            <view class="text-grey">场地路线管理</view>
+            <view class="text-gray text-content text-df">
+              对定向越野活动的场地、路线进行管理与维护
+            </view>
           </view>
         </view>
       </view>
-    </view>
+    </navigator>
   </view>
+
   <view class="cu-item shadow ">
     <view class="cu-list menu-avatar">
       <view class="cu-item">
@@ -57,15 +66,4 @@
       </view>
     </view>
   </view>
-</view>
-
-
-<view>
-  2
-</view>
-<view>
-  2
-</view>
-<view>
-  2
 </view>
